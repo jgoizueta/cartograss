@@ -1,5 +1,7 @@
 # CartoGrass
 
+[![Gem Version](https://badge.fury.io/rb/cartograss.svg)](http://badge.fury.io/rb/cartograss)
+
 Import and Export [CARTO](http://carto.com) datasets as GRASS GIS maps.
 
 Works with GRASS 7.x and only with vector geometry.
