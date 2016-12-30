@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Use CARTO datasets in GRASS GIS}
   spec.description   = %q{GRASS functions to import/export CARTO datasets}
-  spec.homepage      = "https://gitlab.com/jgoizueta/cartograss"
+  spec.homepage      = "https://github.com/jgoizueta/cartograss"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
