@@ -1,7 +1,7 @@
 require "cartograss/version"
 
 module CartoGrass
-  def carto_import(user:, dataset:, api_key:)
+  def carto_import(user:, dataset:, api_key: nil)
     with_api_key api_key do
       if epsg4326?
         v.in.ogr(
@@ -70,12 +70,16 @@ module CartoGrass
   end
 
   def with_api_key(api_key)
-    api_key_var = "#{CARTO_OGR.upcase}_API_KEY"
-    begin
-      ENV[api_key_var] = api_key
+    if api_key
+      api_key_var = "#{CARTO_OGR.upcase}_API_KEY"
+      begin
+        ENV[api_key_var] = api_key
+        yield
+      ensure
+        ENV.delete api_key_var
+      end
+    else
       yield
-    ensure
-      ENV.delete api_key_var
     end
   end
 

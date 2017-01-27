@@ -25,8 +25,9 @@ Or install it yourself as:
 
 ## Usage
 
-You'll need a [CARTO engine](https://carto.com/engine/) account 
-(that is, one with an authorized API KEY).
+You'll need a [CARTO engine](https://carto.com/engine/) account
+(that is, one with an authorized API KEY). The api key will actually needed to export data to CARTO
+or import from private CARTO datasets.
 
 This example fetches some data from your CARTO account, then processes it in GRASS and
 sends the results back to CARTO so they can be visualized in web maps.
@@ -59,7 +60,6 @@ GrassGis.session grass_config do
     dataset: 'mydataset'
   )
 end
-
 ```
 
 ## Development
